@@ -1,3 +1,7 @@
+### Boilerplate code for celery rabbitmq docker cluster
+
+-------------------------
+
 ##### Version
 
 Docker-compose : `docker-compose version 1.8.0, build unknown`
