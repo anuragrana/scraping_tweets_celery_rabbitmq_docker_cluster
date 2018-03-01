@@ -1,4 +1,4 @@
-from .tasks import longtime_add
+from .task_receiver import longtime_add
 
 
 if __name__ == '__main__':
