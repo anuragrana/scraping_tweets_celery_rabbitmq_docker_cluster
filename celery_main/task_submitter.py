@@ -1,7 +1,7 @@
-from .task_receiver import longtime_add
+from .task_receiver import do_work
 
 
 if __name__ == '__main__':
     for i in range(10):
-        result = longtime_add.delay(i)
+        result = do_work.delay(i)
         print('task submitted' + str(i))
