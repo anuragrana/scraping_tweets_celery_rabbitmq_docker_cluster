@@ -6,7 +6,7 @@ import random
 
 @app.task(bind=True,default_retry_delay=10)
 def longtime_add(self, item):
-    print('Task received ' + item)
+    print('Task received ' + str(item))
     # sleep for random seconds to simulate a really long task
     time.sleep(random.randint(1, 3))
 
