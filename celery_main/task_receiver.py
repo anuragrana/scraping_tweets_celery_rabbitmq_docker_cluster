@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from celery_main.celery_app import app
+from celery_main.celery import app
 import time
 import random
 
