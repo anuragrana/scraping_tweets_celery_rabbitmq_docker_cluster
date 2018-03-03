@@ -1,20 +1,22 @@
-version: '2'
+version: '3.2'
 services:
-     worker:
-          build:
-               context: .
-               dockerfile: dockerfile
-          volumes:
-               - .:/app
-          links:
-               - rabbit
-          depends_on:
-               - rabbit
-     rabbit:
-          hostname: rabbit
-          image: rabbitmq:latest
-          environment:
-               - RABBITMQ_DEFAULT_USER=myuser
-               - RABBITMQ_DEFAULT_PASS=mypassword
-          ports:
-               - "5672:5672"
+    worker:
+        build:
+            context: .
+            dockerfile: dockerfile
+        volumes:
+            - type: bind
+              source: .
+              target: /app
+        links:
+            - rabbit
+        depends_on:
+            - rabbit
+    rabbit:
+        hostname: rabbit
+        image: rabbitmq:latest
+        environment:
+            - RABBITMQ_DEFAULT_USER=myuser
+            - RABBITMQ_DEFAULT_PASS=mypassword
+        ports:
+            - "5672:5672"
