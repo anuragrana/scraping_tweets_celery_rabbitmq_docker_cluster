@@ -20,3 +20,11 @@ services:
             - RABBITMQ_DEFAULT_PASS=mypassword
         ports:
             - "5672:5672"
+    rproxy:
+        hostname: rproxy
+        image: anuragrana/rotating-proxy
+        environment:
+            - tors=25
+        ports:
+            - "5566:5566"
+            - "4444:4444"

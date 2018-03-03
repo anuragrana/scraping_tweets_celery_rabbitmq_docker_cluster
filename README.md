@@ -1,4 +1,7 @@
-### Boilerplate code for celery rabbitmq docker cluster
+### Scraping tweets quickly using celery, RabbitMQ and Docker cluster
+-------------------------
+Please go through the below article for better understanding:
+
 
 -------------------------
 
@@ -30,5 +33,22 @@
 - Do not increase concurrency to too much in dockerfile as machine might not be able to handle it
 
   `ENTRYPOINT celery -A test_celery worker --concurrency=10 --loglevel=info`
+
+-------------------------------------------
+
+##### using host postgres from docker container
+- for allowing connection from anywhere:
+
+  in /etc/postgres/ postgres.conf file , update listen_addresses set it to '*' to listed from all IPs
+
+- For authorizing any user from docker IPs, in pg_hba.conf file add line:
+
+  `host    all             all             172.19.0.0/16            trust`
+
+  172.19.0.0/16 is the range of docker container.
+
+- restart the postgres: `sudo /etc/init.d/postgres restart`
+
+- Host for DB config would be your local machine IP. Change in config file.
 
 

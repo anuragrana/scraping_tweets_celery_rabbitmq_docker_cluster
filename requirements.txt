@@ -14,5 +14,3 @@ beautifulsoup4==4.6.0
 bs4==0.0.1
 lxml==4.1.1
 urllib3==1.22
-stem==1.6.0
-fake-useragent==0.1.10
