@@ -1,7 +1,8 @@
-### Scraping tweets quickly using celery, RabbitMQ and Docker cluster
+### Scraping tweets quickly using celery, RabbitMQ and Docker cluster with Rotating proxy
 -------------------------
 Please go through the below article for better understanding:
 
+http://thepythondjango.com/scrapping-10000-tweets-in-60-seconds-using-celery-rabbitmq-and-docker-clusterwith-rotating-proxy/
 
 -------------------------
 
