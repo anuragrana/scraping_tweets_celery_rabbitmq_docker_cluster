@@ -1,6 +1,4 @@
 from .task_receiver import do_work
-import database
-import time
 
 
 def submit_handles(handles):

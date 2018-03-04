@@ -1,12 +1,6 @@
-from __future__ import absolute_import
 from celery_main.celery import app
-import time
-import random
-import json
 import proxy
 from bs4 import BeautifulSoup
-import database
-import traceback
 
 
 @app.task(bind=True,default_retry_delay=10)
@@ -27,9 +21,8 @@ def parse_tweets(response, handle):
     for tweet in tweets:
         tweets_list.append(get_tweet_text(tweet))
 
-    return tweets_list
     print(str(len(tweets_list)) + " tweets found.")
-    database.save_tweets(tweets_list)
+    # save to DB or to files
 
 
 def get_tweet_text(tweet):
