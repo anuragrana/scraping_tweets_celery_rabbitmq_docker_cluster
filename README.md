@@ -2,7 +2,7 @@
 -------------------------
 Please go through the below article for better understanding:
 
-http://thepythondjango.com/scrapping-10000-tweets-in-60-seconds-using-celery-rabbitmq-and-docker-clusterwith-rotating-proxy/
+https://www.pythoncircle.com/post/518/scraping-10000-tweets-in-60-seconds-using-celery-rabbitmq-and-docker-cluster-with-rotating-proxy/
 
 -------------------------
 
